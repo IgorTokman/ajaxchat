@@ -31,7 +31,5 @@ class Core
     {
         while($row = $this->result->fetch())
             $this->rows[] = $row;
-
-        return $this->rows;
     }
 }

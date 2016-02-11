@@ -1,3 +1,6 @@
+<?php
+require_once "core/init.php";
+?>
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
@@ -12,6 +15,8 @@
     <script src="libs/Bootstrap/js/jquery-1.11.1.min.js"></script>
     <script src="libs/Bootstrap/js/bootstrap.min.js"></script>
     <script src="js/common.js"></script>
+
+
 
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -29,7 +34,7 @@
     <div class="panel-body">
 
             <div class="alert alert-success">
-                <i class="fa fa-user"> Lorem ipsum dolor.</i>
+                <i class="fa fa-user"> <?echo "$name"," ($short_info)"?></i>
                 <button class="btn btn-info pull-right">Выйти</button>
             </div>
 
@@ -38,7 +43,9 @@
             </div>
 
             <div class="well pull-right" id="chart_users">
-                <!--<i class="fa fa-user well-sm"></i>-->
+                <? foreach($user->fetchAllUsers() as $user)
+                    echo "<i class='fa fa-user well-sm'> {$user["name"]}</i>";
+                ?>
             </div>
     </div>
 
