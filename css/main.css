@@ -1,0 +1,18 @@
+.panel{
+    margin: 10px auto;
+    width: 550px;
+}
+
+#chart_messages{
+    width: 73%;
+    height: 400px;
+    overflow: scroll;
+}
+
+#chart_users{
+    width: 25%;
+}
+
+.alert>.fa-user{
+    font-size: 20px;
+}
