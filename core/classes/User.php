@@ -10,18 +10,13 @@ class User extends Core
 {
     public function fetchUser($id)
     {
-        $this->query("SELECT * FROM ajaxchat.users where id = $id");
-        $this->result();
-        return $this->rows;
+        $this->query("SELECT * FROM ajaxchat.users WHERE id = $id");
+        return $this->result()[0];
     }
 
-    public function fetchAllUsers(){
+    public function fetchAllUsers()
+    {
         $this->query("SELECT * FROM ajaxchat.users");
-        $this->result();
-        return $this->rows;
-    }
-
-    public function clearrows(){
-        $this->rows = [];
+        return $this->result();
     }
 }

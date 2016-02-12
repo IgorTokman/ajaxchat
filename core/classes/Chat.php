@@ -14,8 +14,7 @@ class Chat extends Core
     public function fetchMessage()
     {
         $this->query("SELECT * FROM ajaxchat.messages");
-        $this->result();
-        return $this->rows;
+        return  $this->result();
     }
 
     /*
@@ -24,6 +23,11 @@ class Chat extends Core
     public function throwMessage($message, $user_id)
     {
         $time = time();
-        $this->db->query("insert into ajaxchat.messages set text = '$message', user_id = '$user_id', time = '$time'") or die("error");
+        $this->db->exec("insert into ajaxchat.messages set text = '$message', user_id = '$user_id', time = '$time'") or die("insert error");
+    }
+
+    public function deleteAllMessages()
+    {
+        $this->db->exec("DELETE FROM ajaxchat.messages");
     }
 }

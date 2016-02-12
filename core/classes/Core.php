@@ -10,8 +10,6 @@ class Core
 {
     protected $db;
     protected $result;
-    protected $rows = array();
-
     /**
      * Core constructor.
      * @param array $connection_params
@@ -24,12 +22,14 @@ class Core
 
     public function query($sql)
     {
-        $this->result = $this->db->query($sql) or die('error');
+        $this->result = $this->db->query($sql) or die('core query error ');
     }
 
     public function result()
     {
+        //$rows = array();
         while($row = $this->result->fetch())
-            $this->rows[] = $row;
+            $rows[] = $row;
+        return $rows;
     }
 }
