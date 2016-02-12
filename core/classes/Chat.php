@@ -11,7 +11,7 @@ class Chat extends Core
     /**
      * return message from db
      */
-    public function fetchMessage()
+    public function fetchMessages()
     {
         $this->query("SELECT * FROM ajaxchat.messages");
         return  $this->result();
