@@ -1,17 +1,9 @@
 <?php
 
-function load_class($classname){
-    require_once 'classes/' . $classname . '.php';
-}
+require_once 'load.php';
 
-spl_autoload_register('load_class');
+$_SESSION['user_id']  = $_GET['user'];
 
-session_start();
-$_SESSION['user']  = $_GET['user'];
-
-$chat = new Chat();
 $user = new User();
-extract($user->fetchUser($_SESSION['user']));
-
-
+extract($user->fetchUser($_SESSION['user_id']));
 

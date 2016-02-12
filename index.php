@@ -1,6 +1,7 @@
 <?php
 require_once "core/init.php";
 ?>
+
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
@@ -51,14 +52,14 @@ require_once "core/init.php";
 
     <div class="panel-footer">
 
-        <div class="form-group">
+        <form class="form-group" id="message_send">
             <div class="input-group">
-                <input type="text" class="form-control" id="text_message">
+                <input type="text" class="form-control" name = "message" id="text_message" placeholder="Введите сообщение">
             <span class="input-group-btn">
                 <button class="btn btn-default" type="submit">Отправить</button>
             </span>
             </div>
-        </div>
+        </form>
 
     </div>
 </div>
