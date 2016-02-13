@@ -53,7 +53,7 @@ require_once "core/init.php";
 
         <form class="form-group" id="message_send">
             <div class="input-group">
-                <input type="text" class="form-control" name = "message" id="text_message" placeholder="Введите сообщение">
+                <input type="text" class="form-control" name="message" id="text_message" placeholder="Введите сообщение">
             <span class="input-group-btn">
                 <button class="btn btn-default" type="submit" id="submit_btn">Send</button>
             </span>

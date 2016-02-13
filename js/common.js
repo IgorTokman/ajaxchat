@@ -7,21 +7,41 @@ $(function() {
         var str = $(this).serialize();
         e.preventDefault();
 
-        //sending message
-        $.ajax(
-            {
-                url: 'core/send.php',
-                type: 'post',
-                data: str,
-                cache: false,
-                success: function (data) {
-                }
-            }
-        );
+        //checks if message is empty
+        if($('#text_message').val().length === 0) {
+            $('#message_send').addClass('has-error');
 
-        $('#submit_btn').blur();
-        $('#text_message').val("");
-        $('#chatAudio')[0].play();
+            $(this).tooltip({
+                trigger: 'manual',
+                placement: 'top',
+                title: 'Enter your message'
+            }).tooltip('show');
+        }
+
+        //mesasge is correct
+        else {
+
+            //sending message
+            $.ajax(
+                {
+                    url: 'core/send.php',
+                    type: 'post',
+                    data: str,
+                    cache: false,
+                    success: function (data) {
+                    }
+                }
+            );
+
+            $('#submit_btn').blur();
+            $('#text_message').val("");
+            $('#chatAudio')[0].play();
+        }
+    });
+
+    //message input
+    $('#text_message').on('keydown',function(e){
+        $('#message_send').removeClass('has-error').tooltip('hide');
     });
 
     //message view
@@ -40,5 +60,5 @@ $(function() {
          $('#chart_messages').animate({"scrollTop":9999},'slow');
      }
         //messages update every 1 second
-        setInterval(show,1000);
+        setInterval(show,500);
  });
