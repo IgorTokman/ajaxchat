@@ -6,6 +6,8 @@
  * Date: 11.02.2016
  * Time: 22:48
  */
+
+// basic class for working with database
 class Core
 {
     protected $db;
@@ -20,11 +22,17 @@ class Core
         $this->db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
     }
 
+    /**
+     * @param $sql
+     */
     public function query($sql)
     {
         $this->result = $this->db->query($sql) or die('core query error ');
     }
 
+    /**
+     * @return array
+     */
     public function result()
     {
         //$rows = array();

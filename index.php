@@ -36,11 +36,10 @@ require_once "core/init.php";
 
             <div class="alert alert-success">
                 <i class="fa fa-user"> <?echo "$name"," ($short_info)"?></i>
-                <button class="btn btn-info pull-right">Выйти</button>
+                <button class="btn btn-info pull-right">Exit</button>
             </div>
 
             <div class="well pull-left" id="chart_messages">
-                <!--<div class="alert alert-info"></div>-->
             </div>
 
             <div class="well pull-right" id="chart_users">
@@ -56,7 +55,7 @@ require_once "core/init.php";
             <div class="input-group">
                 <input type="text" class="form-control" name = "message" id="text_message" placeholder="Введите сообщение">
             <span class="input-group-btn">
-                <button class="btn btn-default" type="submit" id="submit_btn">Отправить</button>
+                <button class="btn btn-default" type="submit" id="submit_btn">Send</button>
             </span>
             </div>
         </form>

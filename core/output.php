@@ -1,5 +1,7 @@
 <?php
 
+//messages view
+
 require_once 'load.php';
 
 $user = new User();
