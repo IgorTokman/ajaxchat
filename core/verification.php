@@ -8,6 +8,7 @@ foreach($user->fetchAllUsers() as $person) {
            $_SESSION['user_id'] = $person['id'];
            $_SESSION['auth'] = 'yes';
              echo $_SESSION['user_id'];
+        $user->query("UPDATE ajaxchat.users SET active = 'yes' WHERE id=" . $_SESSION['user_id']);
             return ;
     }
 }

@@ -33,6 +33,15 @@ $(function(){
                     success: function (data) {
                         if(data !== "wrong")
                            document.location = 'http://localhost/ajaxchat/?user=' + data;
+                        else
+                        {
+                            $('#error').show();
+                            $.each($('input'),function(index, value){
+                               var input = $(value);
+                                input.val("");
+
+                            });
+                        }
                     }
                 }
             );

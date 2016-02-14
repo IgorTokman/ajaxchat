@@ -1,5 +1,7 @@
 <?php
-session_start();
+
+require_once "core/active.php";
+error_reporting(E_ALL & !E_NOTICE);
 $_SESSION = array();
 session_destroy();
 ?>
@@ -22,6 +24,14 @@ session_destroy();
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+        #error{
+            text-align: center;
+            display: none;
+            margin: 10px auto;
+            width: 85%;
+        }
+    </style>
 </head>
 <body>
 
@@ -29,6 +39,11 @@ session_destroy();
 
     <div class="panel-heading">
         <div class="panel-title">Application AjaxChat</div>
+    </div>
+
+    <div id="error" class="alert alert-danger" role="alert">
+        <strong>You have entered an incorrect login/password</strong><br/>
+        Try again or go away
     </div>
 
     <div class="panel-body">
