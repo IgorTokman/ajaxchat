@@ -16,8 +16,7 @@ require_once "core/init.php";
     <script src="libs/Bootstrap/js/jquery-1.11.1.min.js"></script>
     <script src="libs/Bootstrap/js/bootstrap.min.js"></script>
     <script src="js/common.js"></script>
-
-
+    <script src="js/cur_users.js"></script>
 
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -28,24 +27,21 @@ require_once "core/init.php";
 
 <div class="panel panel-primary">
 
-    <div class="panel-heading">
-        <div class="panel-title">Application AjaxChat</div>
-    </div>
+        <div class="panel-heading">
+            <div class="panel-title">Application AjaxChat</div>
+        </div>
 
     <div class="panel-body">
 
             <div class="alert alert-success">
                 <i class="fa fa-user"> <?echo "$name"," ($short_info)"?></i>
-                <button class="btn btn-info pull-right">Exit</button>
+                <a href="authorization.php" class="btn btn-info pull-right">Exit</a>
             </div>
 
             <div class="well pull-left" id="chart_messages">
             </div>
 
             <div class="well pull-right" id="chart_users">
-                <? foreach($user->fetchAllUsers() as $user)
-                    echo "<i class='fa fa-user well-sm'> {$user["name"]}</i>";
-                ?>
             </div>
     </div>
 

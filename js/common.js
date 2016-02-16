@@ -61,4 +61,5 @@ $(function() {
      }
         //messages update every 1 second
         setInterval(show,500);
+
  });

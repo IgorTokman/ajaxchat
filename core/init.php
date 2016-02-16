@@ -4,7 +4,8 @@
 
 require_once 'load.php';
 
-$_SESSION['user_id']  = $_GET['user'];
+if(!isset($_SESSION['auth']))
+    header("Location:" . "authorization.php");
 
 $user = new User();
 

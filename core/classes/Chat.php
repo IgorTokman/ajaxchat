@@ -1,13 +1,7 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: IgorTokman
- * Date: 11.02.2016
- * Time: 23:49
- */
-
 //class for interaction with the table messages
+
 class Chat extends Core
 {
     /**
