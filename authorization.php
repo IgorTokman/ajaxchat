@@ -1,7 +1,8 @@
 <?php
 
-require_once "core/active.php";
-error_reporting(E_ALL & !E_NOTICE);
+require_once "core/load.php";
+change_active('no');
+
 $_SESSION = array();
 session_destroy();
 ?>

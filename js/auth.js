@@ -1,4 +1,6 @@
 $(function(){
+
+    //checks if some input is empty
     $('#auth').submit(function(e){
         e.preventDefault();
         var inputs = $(this).find('input');
@@ -21,6 +23,7 @@ $(function(){
             }
         });
 
+        //verification user login/password
         if($('#login').val().length !== 0 && $('#password').val().length !== 0)
         {
             var str = $('#auth').serialize();
@@ -35,6 +38,7 @@ $(function(){
                            document.location = 'http://localhost/ajaxchat/?user=' + data;
                         else
                         {
+                            //displays error block
                             $('#error').show();
                             $.each($('input'),function(index, value){
                                var input = $(value);

@@ -1,5 +1,7 @@
 $(function(){
 
+//displays all users what have active status "yes"
+
     function showUsers(){
         $.ajax(
             {
@@ -10,9 +12,8 @@ $(function(){
                 }
             }
         );
-
     }
-    //users update every 1 second
+    //users are updated every 1 second
     setInterval(showUsers,1000);
 
 });

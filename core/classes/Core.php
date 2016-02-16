@@ -1,13 +1,7 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: IgorTokman
- * Date: 11.02.2016
- * Time: 22:48
- */
-
 // basic class for working with database
+
 class Core
 {
     protected $db;

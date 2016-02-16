@@ -1,13 +1,7 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: IgorTokman
- * Date: 12.02.2016
- * Time: 1:33
- */
-
 //class for interaction with the table users
+
 class User extends Core
 {
     /**

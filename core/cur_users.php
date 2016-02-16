@@ -1,5 +1,7 @@
 <?php
 
+//checks if chat user has active status "yes"
+
 require_once 'load.php';
 
 $user = new User();
