@@ -3,6 +3,8 @@
 require_once "core/load.php";
 change_active('no');
 
+require_once "core/delete_mes_tb.php";
+
 $_SESSION = array();
 session_destroy();
 ?>
